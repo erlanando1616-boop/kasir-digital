@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Produk Bisnis</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CDN Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
 
+    <div class="container">
+        <header>
+            <h2>Daftar Produk</h2>
+            <p>Tambah, ubah, atau hapus menu bisnismu.</p>
+        </header>
+
+        <!-- Form Tambah Produk -->
+        <div class="form-card">
+            <div class="input-group">
+                <label>NAMA PRODUK</label>
+                <input type="text" id="productName" placeholder="Contoh: Kopi Susu">
+            </div>
+
+            <div class="input-group">
+                <label>KATEGORI</label>
+                <input type="text" id="productCategory" placeholder="Contoh: Coffee">
+            </div>
+
+            <div class="input-group">
+                <label>HARGA (RP)</label>
+                <input type="number" id="productPrice" placeholder="20000">
+            </div>
+
+            <div class="input-group">
+                <label>FOTO PRODUK</label>
+                <input type="file" id="productImage" accept="image/*">
+            </div>
+
+            <button id="btnAdd" class="btn-tambah">+ Tambah Produk</button>
+        </div>
+
+        <!-- Tabel Daftar Produk -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>FOTO</th>
+                        <th>PRODUK</th>
+                        <th>KATEGORI</th>
+                        <th>HARGA</th>
+                        <th>AKSI</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <tr>
+                        <td colspan="5" class="empty-text">Belum ada produk.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
